@@ -19,12 +19,12 @@ body {
 }
 
 a {
-  font-size:40px; 
-  width: 500px; 
+  font-size:35px; 
+  width: 600px; 
   background-color:#73240a;  
 
   border: 4px solid;
-  border-radius: 15px; 
+  border-radius: 30px; 
   border-color:white;
 
   text-decoration: none;
