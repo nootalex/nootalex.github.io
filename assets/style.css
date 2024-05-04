@@ -1,0 +1,35 @@
+html {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+body {
+  background-image: url("./background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 10px auto;
+  top: 50%;
+  transform: translate(0, -50%);
+  position: absolute;
+}
+
+a {
+  font-size:55px; 
+  width: 100%; 
+  background-color:#73240a;  
+
+  border: 2px solid;
+  border-radius: 10px; 
+  border-color:white;
+
+  text-decoration: none;
+  color: white;
+  display: block;
+  margin: 10px;
+  padding: 10px;
+}
