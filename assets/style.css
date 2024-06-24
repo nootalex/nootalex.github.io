@@ -21,15 +21,55 @@ body {
 a {
   font-size:15px; 
   width: 500px; 
-  background-color:#b0fcff;  
+  background:none;  
 
   border: 8px solid;
   border-radius: 30px; 
-  border-color:white;
+  border-color:#74b9ff;
 
   text-decoration: none;
+  font-weight: bold;
   color: black;
   display: block;
   margin: 10px;
   padding: 10px;
+}
+
+.animated-button {
+  display: inline-block;
+  position: relative;
+  font-size: 15px;
+  width: 500px;
+  background: none;
+  border: 8px solid #74b9ff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  margin: 10px;
+  padding: 10px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.animated-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #74b9ff;
+  z-index: -1;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  border-radius: 22px;
+}
+
+.animated-button:hover::before {
+  transform: translateY(0);
+}
+
+.animated-button:hover {
+  color: white;
 }
