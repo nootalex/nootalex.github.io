@@ -1,0 +1,105 @@
+html {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+body {
+    background-image: url("./background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 10px auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    position: absolute;
+}
+
+.search-box {
+    display: flex;
+}
+
+.search-box input {
+    padding: 10px;
+    font-size: 16px;
+    width: 600px;
+    border: 8px solid #74b9ff;
+    border-radius: 30px 0 0 30px;
+    outline: none;
+    border-right: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    background: none;
+    color: black;
+}
+
+.search-box input::placeholder {
+    color: black;
+    opacity: 0.5;
+}
+
+.search-box input::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #74b9ff;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    border-radius: 22px 0 0 22px;
+}
+
+.search-box input:hover::before,
+.search-box input:focus::before,
+.search-box input:active::before {
+    transform: translateY(0);
+}
+
+.search-box input:hover,
+.search-box input:focus,
+.search-box input:active {
+    color: white;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 8px solid #74b9ff;
+    border-radius: 0 30px 30px 0;
+    border-left: none;
+    background: none;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.search-box button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #74b9ff;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    border-radius: 0 22px 22px 0;
+}
+
+.search-box button:hover::before {
+    transform: translateY(0);
+}
+
+.search-box button:hover {
+    color: white;
+}

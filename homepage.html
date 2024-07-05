@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+    <link rel="stylesheet" href="./assets/homepagestyle.css">
+	<link rel="icon" href="./assets/favicon.png">
+	<meta property="og:title" content="a homepage">
+    <meta property="og:description" content="a WHAT">
+</head>
+<body>
+<img src="./assets/profile.png">
+<h1>homepage</h1>
+    <div class="search-box">
+        <input type="text" id="search-input" placeholder="search">
+        <button id="search-button">🔍</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const searchInput = document.getElementById('search-input');
+            const searchButton = document.getElementById('search-button');
+
+            searchInput.addEventListener('focus', clearPlaceholder);
+            searchInput.addEventListener('blur', restorePlaceholder);
+            searchInput.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter') {
+                    searchGoogle();
+                }
+            });
+            searchButton.addEventListener('click', searchGoogle);
+
+            function clearPlaceholder() {
+                searchInput.setAttribute('placeholder', '');
+            }
+
+            function restorePlaceholder() {
+                if (searchInput.value === '') {
+                    searchInput.setAttribute('placeholder', 'Search...');
+                }
+            }
+
+            function searchGoogle() {
+                const query = searchInput.value.trim();
+                if (query === '') {
+                    return;
+                }
+                window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+            }
+        });
+    </script>
+</body>
+</html>
