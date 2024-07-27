@@ -9,7 +9,7 @@ body {
   background-image: url("./background.png");
   background-size: cover;
   background-repeat: no-repeat;
-  color: black;
+  color: white;
   font-family: sans-serif;
   text-align: center;
   margin: 10px auto;
@@ -19,14 +19,12 @@ body {
 }
 
 a {
-  font-size:15px; 
-  width: 500px; 
-  background:none;  
-
+  font-size: 15px;
+  width: 500px;
+  background: none;
   border: 8px solid;
-  border-radius: 30px; 
-  border-color:#74b9ff;
-
+  border-radius: 30px;
+  border-color: #8a3824;
   text-decoration: none;
   font-weight: bold;
   color: black;
@@ -38,14 +36,14 @@ a {
 .animated-button {
   display: inline-block;
   position: relative;
-  font-size: 15px;
-  width: 500px;
+  font-size: 16px;
+  width: 450px;
   background: none;
-  border: 8px solid #74b9ff;
+  border: 8px solid #595959;
   border-radius: 30px;
   text-decoration: none;
-  font-weight: bold;
-  color: black;
+  font-weight: black;
+  color: white;
   margin: 10px;
   padding: 10px;
   overflow: hidden;
@@ -59,10 +57,10 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #74b9ff;
+  background: #757474;
   z-index: -1;
   transform: translateY(100%);
-  transition: transform 0.4s ease;
+  transition: transform 0.2s ease;
   border-radius: 22px;
 }
 
@@ -71,5 +69,5 @@ a {
 }
 
 .animated-button:hover {
-  color: white;
+  color: red;
 }
