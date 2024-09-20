@@ -3,6 +3,9 @@ html {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 body {
@@ -15,12 +18,14 @@ body {
   margin: 10px auto;
   top: 50%;
   transform: translate(0, -50%);
-  position: absolute;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 a {
   font-size: 15px;
-  width: 500px;
+  width: 80%;
   background: none;
   border: 8px solid;
   border-radius: 30px;
@@ -37,7 +42,7 @@ a {
   display: inline-block;
   position: relative;
   font-size: 16px;
-  width: 450px;
+  width: 80%;
   background: none;
   border: 8px solid #595959;
   border-radius: 30px;
