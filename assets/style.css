@@ -6,11 +6,12 @@ html {
 }
 
 body {
+	font-family: "Noto Sans Mono", sans-serif;
+background-color: black;
   background-image: url("./background.png");
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
-  font-family: sans-serif;
   text-align: center;
   margin: 10px auto;
   top: 50%;
@@ -23,7 +24,7 @@ a {
   width: 500px;
   background: none;
   border: 8px solid;
-  border-radius: 30px;
+  border-radius: 15px;
   border-color: #8a3824;
   text-decoration: none;
   font-weight: bold;
@@ -38,11 +39,12 @@ a {
   position: relative;
   font-size: 16px;
   width: 450px;
+  height: 15px;
   background: none;
-  border: 8px solid #595959;
-  border-radius: 30px;
+  border: 5px solid #dbdbdb;
+  border-radius: 15px;
   text-decoration: none;
-  font-weight: black;
+  font-weight: medium;
   color: white;
   margin: 10px;
   padding: 10px;
@@ -57,17 +59,17 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #757474;
+  background: #dbdbdb;
   z-index: -1;
-  transform: translateY(100%);
-  transition: transform 0.2s ease;
-  border-radius: 22px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0px;
 }
 
 .animated-button:hover::before {
-  transform: translateY(0);
+  opacity: 1;
 }
 
 .animated-button:hover {
-  color: red;
+  color: black;
 }
